@@ -1,6 +1,6 @@
 function main() {
-let attempts 
-let matches 
+let attempts =0
+let matches = 0
 let picked = []
 let pickedID= []
 const cards = [
@@ -77,6 +77,7 @@ for (box of boxes){
 
 
 function checkWin() {
+  
   if (picked[0]==picked[1]){
     boxes[pickedID[0]].classList.add('picked')
     boxes[pickedID[1]].classList.add('picked')
@@ -103,7 +104,7 @@ function checkWin() {
 
 
 function boxClicked() {
-
+  
   const id = this.getAttribute('data-id')
   this.setAttribute("src",cards[id].picture)
   pickedID.push(id)
@@ -111,6 +112,8 @@ function boxClicked() {
   console.log(pickedID);
   if (picked.length == 2){
     setTimeout(checkWin, 400)
+    attempts +=1
+    document.querySelector('#attempt').innerHTML= attempts
   }
 }
 
