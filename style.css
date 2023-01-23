@@ -1,6 +1,6 @@
 
 
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 #board{
   height: 500px;
@@ -16,4 +16,8 @@ img{
 
 .picked{
   filter: grayscale(100%)
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
 }

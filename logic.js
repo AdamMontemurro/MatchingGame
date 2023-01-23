@@ -1,5 +1,5 @@
 function main() {
-let attempts =0
+let attempts = 0
 let matches = 0
 let picked = []
 let pickedID= []
