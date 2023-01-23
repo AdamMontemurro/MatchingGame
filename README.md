@@ -36,3 +36,4 @@
 ### Resources 
 [Trello](https://trello.com/b/9Vmuzk0r/project-1)
 [How to Shuffle an Array](https://www.tutorialspoint.com/How-to-randomize-shuffle-a-JavaScript-array)
+[Delay a function](https://www.tutorialspoint.com/How-to-delay-a-JavaScript-function-call-using-JavaScript)
