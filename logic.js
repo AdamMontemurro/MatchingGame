@@ -95,6 +95,8 @@ function checkWin() {
       }
 }
     else if (picked[0]!==picked[1]){
+      boxes[pickedID[0]].addEventListener('click',boxClicked)
+      boxes[pickedID[1]].addEventListener('click',boxClicked)
       boxes[pickedID[0]].setAttribute("src", "pictures/shine.png")
       boxes[pickedID[1]].setAttribute("src", "pictures/shine.png")
       picked=[]
@@ -109,11 +111,12 @@ function boxClicked() {
   this.setAttribute("src",cards[id].picture)
   pickedID.push(id)
   picked.push(cards[id].name)
-  console.log(pickedID);
+  this.removeEventListener('click',boxClicked)
   if (picked.length == 2){
     setTimeout(checkWin, 400)
     attempts +=1
     document.querySelector('#attempt').innerHTML= attempts
+
   }
 }
 
