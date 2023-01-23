@@ -27,9 +27,9 @@
 ***
 
 ### ***Future Updates***
--[]
--[]
-
+- [] Add Higher difficulty
+- [] Future Update 1
+- [] Future Update 2
 
 ***
 
