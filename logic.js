@@ -1,6 +1,6 @@
 function main() {
 
-const score = 0
+let matches = 0
 let picked = []
 let pickedID= []
 const cards = [
@@ -84,6 +84,8 @@ function checkWin() {
     boxes[pickedID[1]].removeEventListener('click',boxClicked)
     picked=[]
     pickedID=[]
+    matches+=1
+    document.querySelector('#matches').innerHTML= matches
 }
     else if (picked[0]!==picked[1]){
       boxes[pickedID[0]].setAttribute("src", "pictures/shine.png")
@@ -102,7 +104,7 @@ function boxClicked() {
   picked.push(cards[id].name)
   console.log(pickedID);
   if (picked.length == 2){
-    setTimeout(checkWin, 750)
+    setTimeout(checkWin, 400)
   }
 }
 
