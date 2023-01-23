@@ -83,6 +83,7 @@ function main() {
       boxes[pickedID[1]].classList.add('picked')
       boxes[pickedID[0]].removeEventListener('click', boxClicked)
       boxes[pickedID[1]].removeEventListener('click', boxClicked)
+      
       picked = []
       pickedID = []
       matches += 1
@@ -90,8 +91,9 @@ function main() {
       if (matches === 6) {
         const win = new Audio("sounds/complete.wav")
         win.play()
-      } else {
-        return
+      }else {
+          const matchSound = new Audio("sounds/match.wav")
+          matchSound.play()
       }
     }
     else if (picked[0] !== picked[1]) {

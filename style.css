@@ -4,6 +4,9 @@
 
 main{
   height:700px;
+  width: 935px;
+  background-image: url(/pictures/Finaldestination.png);
+  background-size: contain;
 }
 #board{
   height: 615px;
@@ -16,8 +19,8 @@ img{
   object-fit: contain;
   height: 200px;
   width: 150px;
-  border: 1px solid black;
-
+  border: 1px solid cyan;
+  
 }
 
 .picked{
