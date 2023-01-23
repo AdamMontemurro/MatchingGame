@@ -76,7 +76,22 @@ for (box of boxes){
 }
 
 
-
+function checkWin() {
+  if (picked[0]==picked[1]){
+    boxes[pickedID[0]].classList.add('picked')
+    boxes[pickedID[1]].classList.add('picked')
+    boxes[pickedID[0]].removeEventListener('click',boxClicked)
+    boxes[pickedID[1]].removeEventListener('click',boxClicked)
+    picked=[]
+    pickedID=[]
+}
+    else if (picked[0]!==picked[1]){
+      boxes[pickedID[0]].setAttribute("src", "pictures/shine.png")
+      boxes[pickedID[1]].setAttribute("src", "pictures/shine.png")
+      picked=[]
+      pickedID=[]
+    }
+}
 
 
 function boxClicked() {
@@ -87,20 +102,7 @@ function boxClicked() {
   picked.push(cards[id].name)
   console.log(pickedID);
   if (picked.length == 2){
-    if (picked[0]==picked[1]){
-      boxes[pickedID[0]].classList.add('picked')
-      boxes[pickedID[1]].classList.add('picked')
-      boxes[pickedID[0]].removeEventListener('click',boxClicked)
-      boxes[pickedID[1]].removeEventListener('click',boxClicked)
-      picked=[]
-      pickedID=[]
-  }
-      else if (picked[0]!==picked[1]){
-        boxes[pickedID[0]].setAttribute("src", "pictures/shine.png")
-        boxes[pickedID[1]].setAttribute("src", "pictures/shine.png")
-        picked=[]
-        pickedID=[]
-      }
+    setTimeout(checkWin, 750)
   }
 }
 
