@@ -75,6 +75,10 @@ for (box of boxes){
   box.addEventListener('click', boxClicked)
 }
 
+
+
+
+
 function boxClicked() {
 
   const id = this.getAttribute('data-id')
@@ -82,16 +86,23 @@ function boxClicked() {
   pickedID.push(id)
   picked.push(cards[id].name)
   console.log(pickedID);
-  
-  if (picked[0]==picked[1]){
-    score+=10
-    boxes[pickedID[0]].classList.add('picked')
-    boxes[pickedID[1]].classList.add('picked')
-    boxes[pickedID[0]].removeEventListener('click',boxClicked)
-    boxes[pickedID[1]].removeEventListener('click',boxClicked)
+  if (picked.length == 2){
+    if (picked[0]==picked[1]){
+      boxes[pickedID[0]].classList.add('picked')
+      boxes[pickedID[1]].classList.add('picked')
+      boxes[pickedID[0]].removeEventListener('click',boxClicked)
+      boxes[pickedID[1]].removeEventListener('click',boxClicked)
+      picked=[]
+      pickedID=[]
+  }
+      else if (picked[0]!==picked[1]){
+        boxes[pickedID[0]].setAttribute("src", "pictures/shine.png")
+        boxes[pickedID[1]].setAttribute("src", "pictures/shine.png")
+        picked=[]
+        pickedID=[]
+      }
   }
 }
-
 
 }
 
