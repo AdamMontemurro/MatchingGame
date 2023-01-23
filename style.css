@@ -2,7 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+main{
+  height:700px;
+}
 #board{
+ 
   height: 500px;
   width: 650px;
   margin:auto;
@@ -10,8 +14,10 @@
 }
 
 img{
-  height: 150px;
+  object-fit: contain;
+  height: 200px;
   width: 150px;
+  border: 1px solid black;
 
 }
 
