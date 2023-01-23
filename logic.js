@@ -1,6 +1,6 @@
 function main() {
-
-let matches = 0
+let attempts 
+let matches 
 let picked = []
 let pickedID= []
 const cards = [
@@ -86,6 +86,12 @@ function checkWin() {
     pickedID=[]
     matches+=1
     document.querySelector('#matches').innerHTML= matches
+      if (matches===6){
+        const win = new Audio("sounds/complete.wav")
+        win.play()
+      }else {
+        return
+      }
 }
     else if (picked[0]!==picked[1]){
       boxes[pickedID[0]].setAttribute("src", "pictures/shine.png")
@@ -107,6 +113,7 @@ function boxClicked() {
     setTimeout(checkWin, 400)
   }
 }
+
 
 }
 
