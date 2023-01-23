@@ -1,7 +1,8 @@
 function main() {
 
-
+const score = 0
 let picked = []
+let pickedID= []
 const cards = [
   {
     name: 'fox',
@@ -73,10 +74,22 @@ const boxes = Array.from(document.getElementsByClassName("box"))
 for (box of boxes){
   box.addEventListener('click', boxClicked)
 }
+
 function boxClicked() {
+
   const id = this.getAttribute('data-id')
   this.setAttribute("src",cards[id].picture)
-
+  pickedID.push(id)
+  picked.push(cards[id].name)
+  console.log(pickedID);
+  
+  if (picked[0]==picked[1]){
+    score+=10
+    boxes[pickedID[0]].classList.add('picked')
+    boxes[pickedID[1]].classList.add('picked')
+    boxes[pickedID[0]].removeEventListener('click',boxClicked)
+    boxes[pickedID[1]].removeEventListener('click',boxClicked)
+  }
 }
 
 
