@@ -28,7 +28,7 @@
 
 ### ***Future Updates***
 - [] Add Higher difficulty
-- [] Future Update 1
+- [] Dark Mode
 - [] Future Update 2
 
 ***
