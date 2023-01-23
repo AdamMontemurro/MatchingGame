@@ -35,4 +35,4 @@
 
 ### Resources 
 [Trello](https://trello.com/b/9Vmuzk0r/project-1)
-
+[How to Shuffle an Array](https://www.tutorialspoint.com/How-to-randomize-shuffle-a-JavaScript-array)
