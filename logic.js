@@ -73,6 +73,11 @@ const boxes = Array.from(document.getElementsByClassName("box"))
 for (box of boxes){
   box.addEventListener('click', boxClicked)
 }
+function boxClicked() {
+  const id = this.getAttribute('data-id')
+  this.setAttribute("src",cards[id].picture)
+
+}
 
 
 }
