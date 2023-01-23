@@ -6,8 +6,7 @@ main{
   height:700px;
 }
 #board{
- 
-  height: 500px;
+  height: 615px;
   width: 650px;
   margin:auto;
   
@@ -27,4 +26,8 @@ img{
 
 h2 {
   font-family: 'Roboto', sans-serif;
+}
+
+#spacer{
+  height: 42.5px;
 }
