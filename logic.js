@@ -1,4 +1,5 @@
 function main() {
+  const stage = document.getElementById('stage')
   let attempts = 0
   let matches = 0
   let picked = []
@@ -70,10 +71,13 @@ function main() {
 
   const boxes = Array.from(document.getElementsByClassName("box"))
 
+  stage.addEventListener('change', stageChange)
+
 
   for (box of boxes) {
     box.addEventListener('click', boxClicked)
   }
+
 
 
   function checkWin() {
@@ -121,6 +125,16 @@ function main() {
     }
   }
 
+function stageChange() {
+  const stageBG = document.querySelector('main')
+  if (stage.value === "fd"){
+    stageBG.style.backgroundImage = 'url(pictures/Finaldestination.png)'
+  } else if (stage.value === "dl"){
+    stageBG.style.backgroundImage = 'url(pictures/dreamland.png)'
+  } else if (stage.value === "bf"){
+    stageBG.style.backgroundImage = 'url(pictures/BF.jpg)'
+  }
+}
 
 }
 

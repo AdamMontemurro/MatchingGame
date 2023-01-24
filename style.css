@@ -5,8 +5,9 @@
 main{
   height:700px;
   width: 935px;
-  background-image: url(/pictures/Finaldestination.png);
-  background-size: contain;
+  background-image: url(/pictures/dreamland.png);
+  background-size: 100% 100%
+  
 }
 #board{
   height: 615px;
