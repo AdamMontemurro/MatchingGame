@@ -1,5 +1,4 @@
 function main() {
-  const stage = document.getElementById('stage')
   let attempts = 0
   let matches = 0
   let picked = []
@@ -126,6 +125,7 @@ function main() {
   }
 
 function stageChange() {
+  const stage = document.getElementById('stage')
   const stageBG = document.querySelector('main')
   if (stage.value === "fd"){
     stageBG.style.backgroundImage = 'url(pictures/Finaldestination.png)'

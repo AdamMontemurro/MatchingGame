@@ -34,6 +34,7 @@ h2 {
   font-family: 'Roboto', sans-serif;
   color:rgb(218, 209, 196);
   text-shadow: #000 0px 0px 2px;
+  display: inline-block;
 
 }
 #stageSelectTitle{
@@ -60,7 +61,11 @@ h2 {
 body{ 
   margin: auto;
   width:50%;
-  /* background-color: #4e4c4c; */
   background-image: url(pictures/background.jpg);
   background-size:cover ;
 }
+
+#attempts,#hsDisplay{
+  margin-left: 20px;
+}
+
