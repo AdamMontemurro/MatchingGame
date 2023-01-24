@@ -6,7 +6,9 @@ main{
   height:700px;
   width: 935px;
   background-image: url(/pictures/dreamland.png);
-  background-size: 100% 100%
+  background-size: 100% 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
   
 }
 #board{
@@ -30,8 +32,35 @@ img{
 
 h2 {
   font-family: 'Roboto', sans-serif;
+  color:rgb(218, 209, 196);
+  text-shadow: #000 0px 0px 2px;
+
+}
+#stageSelectTitle{
+  display: inline;
+  margin-right: 5px;
 }
 
 #spacer{
   height: 42.5px;
+}
+
+
+#form{
+  display: inline;
+}
+
+.container{
+  margin: auto;
+  width:50%;
+  border: 2px solid rgb(182, 182, 19);
+  padding:2px
+}
+
+body{ 
+  margin: auto;
+  width:50%;
+  /* background-color: #4e4c4c; */
+  background-image: url(pictures/background.jpg);
+  background-size:cover ;
 }

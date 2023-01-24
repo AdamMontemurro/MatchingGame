@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div id="container">
+  <div class="container">
     <h2>Matches: <span id="matches"></span> </h2>
     <h2>Attempts: <span id="attempt"> </span></h2>
   </div>
@@ -31,16 +31,16 @@
       <img class="box" src="pictures/shine.png" data-id="11">
     </div>
   </main>
-
-    <h2>Stage Select</h2>
-    <form>
+  <div class="container">
+    <h2 id="stageSelectTitle">Stage Select</h2>
+    <form id="form">
       <select id="stage">
         <option value="dl">Dreamland</option>
         <option value="fd">Final Destination</option>
         <option value="bf">Battlefield</option>
       </select>
     </form>
-
+  </div>
     <script src="./logic.js"> </script>
 </body>
 
