@@ -4,16 +4,17 @@
 
 main{
   height:700px;
-  width: 935px;
+  width: 900px;
   background-image: url(/pictures/dreamland.png);
   background-size: 100% 100%;
   margin-top: 5px;
   margin-bottom: 5px;
+  border: 2px solid cadetblue;
   
 }
 #board{
   height: 615px;
-  width: 650px;
+  width: 620px;
   margin:auto;
   
 }

@@ -71,7 +71,7 @@ function main() {
   const boxes = Array.from(document.getElementsByClassName("box"))
 
   stage.addEventListener('change', stageChange)
-
+  document.querySelector('#playAgain').addEventListener('click',playAgain)
 
   for (box of boxes) {
     box.addEventListener('click', boxClicked)
@@ -82,13 +82,11 @@ function main() {
   function checkWin() {
     const hs = document.querySelector('#hs').innerText
     let thisAttempt = document.querySelector('#attempt').innerText
-    console.log(hs.innerText,thisAttempt.innerText);
     if (picked[0] == picked[1]) {
-      boxes[pickedID[0]].classList.add('picked')
-      boxes[pickedID[1]].classList.add('picked')
+      boxes[pickedID[0]].classList.toggle('picked')
+      boxes[pickedID[1]].classList.toggle('picked')
       boxes[pickedID[0]].removeEventListener('click', boxClicked)
       boxes[pickedID[1]].removeEventListener('click', boxClicked)
-      
       picked = []
       pickedID = []
       matches += 1
@@ -100,7 +98,6 @@ function main() {
         alert('new HS')}
         const win = new Audio("sounds/complete.wav")
         win.play()
-        
       }else {
           const matchSound = new Audio("sounds/match.wav")
           matchSound.play()
@@ -142,6 +139,24 @@ function stageChange() {
     stageBG.style.backgroundImage = 'url(pictures/BF.jpg)'
   }
 }
+
+function playAgain() {
+  document.querySelector('#attempt').innerText = 0
+  cards.sort(() => Math.random() - 0.5)
+  for (box of boxes) {
+    box.addEventListener('click', boxClicked)
+    if (box.classList = 'picked'){
+    box.classList.toggle('picked')
+    }
+    box.setAttribute("src", "pictures/shine.png")
+    picked = []
+    pickedID = []
+    attempts = 0
+    matches = 0
+    document.querySelector('#matches').innerText = 0
+  }
+}
+
 
 }
 
