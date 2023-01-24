@@ -18,17 +18,17 @@
 
 ### ***Screenshots*** 
 
-#### Image of Board will go here
-![Place Holder](https://via.placeholder.com/300) 
+#### Game Board
+![ScreenShot](pictures/screenshot1.png) 
 
-#### Image of gameplay Here
-![Place Holder](https://via.placeholder.com/300) 
+#### Game Play
+![GamePlay](pictures/gameplay.png) 
 
 ***
 
 ### ***Future Updates***
 - [] Add Higher difficulty
-- [] Dark Mode
+- [X] Stage Selection
 - [] Future Update 2
 
 ***
@@ -38,3 +38,4 @@
 [How to Shuffle an Array](https://www.tutorialspoint.com/How-to-randomize-shuffle-a-JavaScript-array)
 [Delay a function](https://www.tutorialspoint.com/How-to-delay-a-JavaScript-function-call-using-JavaScript)
 [Pixel art by Daniel Bernal](bernalstudio.com)
+[Background Images](https://www.ssbwiki.com/)
