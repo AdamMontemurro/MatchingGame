@@ -58,6 +58,7 @@ h2 {
   width:50%;
   border: 2px solid rgb(182, 182, 19);
   padding:2px
+  
 }
 
 body{ 
@@ -74,4 +75,17 @@ body{
 #playAgain{
   margin-left: 20px;
   margin-bottom: 4px;
+}
+
+p,a{
+  color:rgb(13, 155, 238);
+  text-shadow: #000 5px 0px 5px;
+}
+
+#credit{
+  background:black;
+  width:max-content;
+  position: relative;
+  left:800px
+  
 }
