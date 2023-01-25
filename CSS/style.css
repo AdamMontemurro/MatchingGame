@@ -1,93 +1,94 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-main{
-  height:700px;
+main {
+  height: 700px;
   width: 900px;
   background-image: url(/pictures/dreamland.png);
   background-size: 100% 100%;
-  margin:auto;
+  margin: auto;
   margin-top: 5px;
   margin-bottom: 5px;
   border: 2px solid cadetblue;
-  
-}
-#board{
-  height: 615px;
-  width: 620px;
-  margin:auto;
-  
+
 }
 
-img{
+#board {
+  height: 615px;
+  width: 620px;
+  margin: auto;
+
+}
+
+img {
   object-fit: contain;
   height: 200px;
   width: 150px;
   border: 1px solid cyan;
-  
+
 }
 
-.picked{
+.picked {
   filter: grayscale(100%)
 }
 
 h2 {
   font-family: 'Roboto', sans-serif;
-  color:rgb(218, 209, 196);
+  color: rgb(218, 209, 196);
   text-shadow: #000 0px 0px 2px;
   display: inline-block;
 
 }
-#stageSelectTitle{
+
+#stageSelectTitle {
   display: inline;
   margin-right: 5px;
 }
 
-#spacer{
+#spacer {
   height: 42.5px;
 }
 
 
-#form{
+#form {
   display: inline;
 }
 
-.container{
+.container {
   margin: auto;
-  width:50%;
+  width: 50%;
   border: 2px solid rgb(182, 182, 19);
-  padding:2px;
+  padding: 2px;
   background-image: url(/pictures/divBG.png);
   background-size: contain;
-  
+
 }
 
-body{ 
+body {
   margin: auto;
-  width:50%;
+  width: 50%;
   background-image: url(/pictures/background.jpg);
-  background-size:cover ;
+  background-size: cover;
 }
 
-#attempts,#hsDisplay{
+#attempts,
+#hsDisplay {
   margin-left: 15px;
 }
 
-#playAgain{
+#playAgain {
   margin-left: 20px;
   margin-bottom: 4px;
 }
 
-p,a{
-  color:rgb(13, 155, 238);
+p,
+a {
+  color: rgb(13, 155, 238);
   text-shadow: #000 5px 0px 5px;
 }
 
-#credit{
-  background:black;
-  width:max-content;
+#credit {
+  background: black;
+  width: max-content;
   position: relative;
-  left:800px
-  
+  left: 800px
 }

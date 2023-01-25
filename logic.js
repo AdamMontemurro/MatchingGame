@@ -71,7 +71,7 @@ function main() {
   const boxes = Array.from(document.getElementsByClassName("box"))
 
   stage.addEventListener('change', stageChange)
-  document.querySelector('#playAgain').addEventListener('click',playAgain)
+  document.querySelector('#playAgain').addEventListener('click', playAgain)
 
   for (box of boxes) {
     box.addEventListener('click', boxClicked)
@@ -80,6 +80,9 @@ function main() {
 
 
   function checkWin() {
+    const attempts = parseInt(document.querySelector('#attempt').innerText)
+    const hs = parseInt(document.querySelector('#hs').innerText)
+    console.log(attempts,hs);
     if (picked[0] == picked[1]) {
       boxes[pickedID[0]].classList.toggle('picked')
       boxes[pickedID[1]].classList.toggle('picked')
@@ -89,15 +92,16 @@ function main() {
       pickedID = []
       matches += 1
       document.querySelector('#matches').innerText = matches
-        if (matches === 6) {
-        if (document.querySelector('#hs').innerText < document.querySelector('#attempt').innerText){
+      
+      if (matches === 6) {
+        if ( attempts < hs )  {
           document.querySelector('#hs').innerText = document.querySelector('#attempt').innerText
-        alert('new HS')}
+        }
         const win = new Audio("sounds/complete.wav")
         win.play()
-      }else {
-          const matchSound = new Audio("sounds/match.wav")
-          matchSound.play()
+      } else {
+        const matchSound = new Audio("sounds/match.wav")
+        matchSound.play()
       }
     }
     else if (picked[0] !== picked[1]) {
@@ -125,34 +129,34 @@ function main() {
     }
   }
 
-function stageChange() {
-  const stage = document.getElementById('stage')
-  const stageBG = document.querySelector('main')
-  if (stage.value === "fd"){
-    stageBG.style.backgroundImage = 'url(pictures/Finaldestination.png)'
-  } else if (stage.value === "dl"){
-    stageBG.style.backgroundImage = 'url(pictures/dreamland.png)'
-  } else if (stage.value === "bf"){
-    stageBG.style.backgroundImage = 'url(pictures/BF.jpg)'
-  }
-}
-
-function playAgain() {
-  document.querySelector('#attempt').innerText = 0
-  cards.sort(() => Math.random() - 0.5)
-  for (box of boxes) {
-    box.addEventListener('click', boxClicked)
-    if (box.classList = 'picked'){
-    box.classList.toggle('picked')
+  function stageChange() {
+    const stage = document.getElementById('stage')
+    const stageBG = document.querySelector('main')
+    if (stage.value === "fd") {
+      stageBG.style.backgroundImage = 'url(pictures/Finaldestination.png)'
+    } else if (stage.value === "dl") {
+      stageBG.style.backgroundImage = 'url(pictures/dreamland.png)'
+    } else if (stage.value === "bf") {
+      stageBG.style.backgroundImage = 'url(pictures/BF.jpg)'
     }
-    box.setAttribute("src", "pictures/shine.png")
-    picked = []
-    pickedID = []
-    attempts = 0
-    matches = 0
-    document.querySelector('#matches').innerText = 0
   }
-}
+
+  function playAgain() {
+    document.querySelector('#attempt').innerText = 0
+    cards.sort(() => Math.random() - 0.5)
+    for (box of boxes) {
+      box.addEventListener('click', boxClicked)
+      if (box.classList = 'picked') {
+        box.classList.toggle('picked')
+      }
+      box.setAttribute("src", "pictures/shine.png")
+      picked = []
+      pickedID = []
+      attempts = 0
+      matches = 0
+      document.querySelector('#matches').innerText = 0
+    }
+  }
 
 
 }
