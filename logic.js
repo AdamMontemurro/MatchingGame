@@ -90,9 +90,9 @@ function main() {
       picked = []
       pickedID = []
       matches += 1
-      document.querySelector('#matches').innerHTML = matches
-      if (matches === 6) {
-        if (hs < thisAttempt){
+      document.querySelector('#matches').innerText = matches
+        if (matches === 6) {
+        if (document.querySelector('#hs').innerText < document.querySelector('#attempt').innerText){
           document.querySelector('#hs').innerText = document.querySelector('#attempt').innerText
 
         alert('new HS')}
