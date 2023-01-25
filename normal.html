@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Match</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Matches: <span id="matches">0</span> </h2>
+    <h2 id="attempts">Attempts: <span id="attempt">0</span></h2>
+    <h2 id="hsDisplay">Best: <span id="hs">100<span></h2>
+  </div>
+  <main>
+    <div id="spacer"></div>
+    <div id="board">
+      <img class="box" src="pictures/shine.png" data-id="0">
+      <img class="box" src="pictures/shine.png" data-id="1">
+      <img class="box" src="pictures/shine.png" data-id="2">
+      <img class="box" src="pictures/shine.png" data-id="3">
+      <img class="box" src="pictures/shine.png" data-id="4">
+      <img class="box" src="pictures/shine.png" data-id="5">
+      <img class="box" src="pictures/shine.png" data-id="6">
+      <img class="box" src="pictures/shine.png" data-id="7">
+      <img class="box" src="pictures/shine.png" data-id="8">
+      <img class="box" src="pictures/shine.png" data-id="9">
+      <img class="box" src="pictures/shine.png" data-id="10">
+      <img class="box" src="pictures/shine.png" data-id="11">
+    </div>
+  </main>
+  <div class="container">
+    <h2 id="stageSelectTitle">Stage Select</h2>
+    <form id="form">
+      <select id="stage">
+        <option value="dl">Dreamland</option>
+        <option value="fd">Final Destination</option>
+        <option value="bf">Battlefield</option>
+      </select>
+    </form>
+    <button id="playAgain">Play Again</button>
+  </div>
+  <footer>
+    <div id="credit">
+    <p>
+      <a href="https://www.artstation.com/bernalstudio">Pixel Images</a> by <a href="https://bernalstudio.com/">Daniel Bernal</a>
+    </p>
+  </div>
+  </footer>
+    <script src="./logic.js"> </script>
+</body>
+
+</html>

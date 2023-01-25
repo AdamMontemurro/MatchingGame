@@ -80,8 +80,6 @@ function main() {
 
 
   function checkWin() {
-    const hs = document.querySelector('#hs').innerText
-    let thisAttempt = document.querySelector('#attempt').innerText
     if (picked[0] == picked[1]) {
       boxes[pickedID[0]].classList.toggle('picked')
       boxes[pickedID[1]].classList.toggle('picked')
@@ -94,7 +92,6 @@ function main() {
         if (matches === 6) {
         if (document.querySelector('#hs').innerText < document.querySelector('#attempt').innerText){
           document.querySelector('#hs').innerText = document.querySelector('#attempt').innerText
-
         alert('new HS')}
         const win = new Audio("sounds/complete.wav")
         win.play()
