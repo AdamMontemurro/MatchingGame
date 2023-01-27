@@ -9,6 +9,8 @@
 ### ***Description***
 #### A game where you collect pairs of pictures on a randomly generated board. Two of a kind is a match. You'll have to remember the position of the cards, because after two are revealed they will turn back around. Collect all the pairs to win! 
 
+## [Play Here](ssbm-memory-game.surge.sh)
+
 ### ***Languages***
 * HTML
 * CSS
