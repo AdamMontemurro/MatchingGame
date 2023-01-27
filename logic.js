@@ -82,7 +82,6 @@ function main() {
   function checkWin() {
     const attempts = parseInt(document.querySelector('#attempt').innerText)
     const hs = parseInt(document.querySelector('#hs').innerText)
-    console.log(attempts,hs);
     if (picked[0] == picked[1]) {
       boxes[pickedID[0]].classList.toggle('picked')
       boxes[pickedID[1]].classList.toggle('picked')
